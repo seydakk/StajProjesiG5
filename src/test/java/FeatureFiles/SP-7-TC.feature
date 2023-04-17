@@ -9,14 +9,21 @@ Feature: As an Admin User I should be able to Add-Edit-Delete School Locations u
       | schoolSetup |
       | locations   |
 
-    Scenario: (SP-7-TC-01) Check Add new location - Positive Scenario
+  Scenario: (SP-7-TC-01) Check Add new location - Positive Scenario
 
-      And Click on the element in Dialog
+    And Click on the element in Dialog
 
-        | addButton |
+      | addButton |
 
-      And User sending the keys in Dialog Content
+    And User sending the keys in Dialog Content
 
-        | nameInput | name1      |
-        | codeInput | shortname  |
-        | capacity  | 2000       |
+      | nameInput | name5      |
+      | locationShortName | shortname2  |
+      | capacity  | 1000       |
+
+    And Click on the element in Dialog
+      | toggleBar |
+      | saveButton |
+
+    Then Verify contains text
+      | successMessage | successfully |
