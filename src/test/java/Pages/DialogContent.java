@@ -130,6 +130,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//td[contains(@class,'cdk-column-buttons')]//ms-delete-button")
     private List<WebElement> deletebuttonlist;
 
+    @FindBy(xpath= "(//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME'])//input")
+    private WebElement locationShortName;
+
+    @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
+    private WebElement toggleBar;
+
 
 
 
@@ -202,6 +208,9 @@ public class DialogContent extends Parent{
              case "employment": return employment;
              case "selectStageEditDoc": return selectStageEditDoc;
              case "group5testingEditBtn": return group5testingEditBtn;
+             case "capacity": return capacity;
+             case "toggleBar": return toggleBar;
+            case "locationShortName": return locationShortName;
 
         }
 
