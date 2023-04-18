@@ -1,21 +1,22 @@
-Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under Human Resources Setup
+Feature: As an Admin User I should be able to Add-Edit-Delete Attestations Under Human Resources Setup
 
   Background:
+
     Given  I log in as an Admin
 
     When Click on the element in LeftNav
 
       | humanResources |
       | setupInHumanR  |
-      | Attestations   |
+      | attestations   |
 
-  Scenario: (SP-1-TC-01) Check Add new Attestations - Positive Scenario
+  Scenario: (SP-2-TC-01) Check Add attestations - Positive Scenario
 
     And Click on the element in Dialog
       | addButton |
 
     And User sending the keys in Dialog Content
-      | nameInput | Sdet Man|
+      | nameInput | Techno SDET|
 
     And Click on the element in Dialog
       | saveButton |
@@ -26,13 +27,13 @@ Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under 
     Then Display required element
       | searchBox |
 
-  Scenario: (SP-1-TC-02) Check Add new Attestations with same data - Negative Scenario
+  Scenario: (SP-2-TC-02) Check Add attestations with same data - Negative Scenario
 
     And Click on the element in Dialog
       | addButton |
 
     And User sending the keys in Dialog Content
-      | nameInput | Sdet Man|
+      | nameInput | Techno SDET|
 
     And Click on the element in Dialog
       | saveButton |
@@ -40,17 +41,17 @@ Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under 
     Then Verify contains text
       | alreadyExists | already exists |
 
-  Scenario: (SP-1-TC-03) Check Edit the Attestations - Positive Scenario
+  Scenario: (SP-2-TC-03) Check Edit the position category - Positive Scenario
 
     And User sending the keys in Dialog Content
-      | searchName | Sdet Man|
+      | searchName | Techno SDET|
 
     And Click on the element in Dialog
       | searchButton |
       | editButton   |
 
     And User sending the keys in Dialog Content
-      | nameInput | Sdet |
+      | nameInput | Techno |
 
     And Click on the element in Dialog
       | saveButton |
@@ -58,21 +59,25 @@ Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under 
     Then Verify contains text
       | successMessage | successfully |
 
-  Scenario: (SP-1-TC-04) Check Delete the Attestations - Positive Scenario
+  Scenario: (SP-2-TC-04) Check Delete the attestations - Positive Scenario
 
     And User delete item from Dialog Content
-      | Sdet |
+      | Techno |
 
     Then Verify contains text
       | successMessage | successfully |
 
-  Scenario: (SP-1-TC-05) Check Delete the Attestations already deleted - Negative Scenario
+  Scenario: (SP-2-TC-05) Check Delete attestations already deleted - Negative Scenario
 
     And User sending the keys in Dialog Content
-      | searchName | Sdet |
+      | searchName | Techno |
 
     And Click on the element in Dialog
       | searchButton |
 
     Then Verify contains text
       | verifyDelete | no data to display |
+
+
+
+
