@@ -53,10 +53,6 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
       | selectarrow |
       | logical |
 
-#    And Select on the element in Dialog
-#
-#      | selectFieldType | Logical |
-
     And Click on the element in Dialog
 
       | saveButton |
