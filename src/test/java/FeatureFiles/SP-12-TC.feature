@@ -9,7 +9,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Nationalities unde
       | parameters    |
       | nationalities |
 
-  Scenario: (SP-4-TC-01) Check Add new Nationality - Positive Scenario
+  Scenario: (SP-12-TC-01) Check Add new Nationality - Positive Scenario
 
     And Click on the element in Dialog
       | addButton |
@@ -27,7 +27,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Nationalities unde
       | searchBox |
 
 
-  Scenario: (SP-4-TC-02) Check Add new Nationality with same data - Negative Scenario
+  Scenario: (SP-12-TC-02) Check Add new Nationality with same data - Negative Scenario
 
     And Click on the element in Dialog
       | addButton |
@@ -42,7 +42,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Nationalities unde
       | alreadyExists | already exists |
 
 
-  Scenario: (SP-4-TC-03) Check Edit the Nationality - Positive Scenario
+  Scenario: (SP-12-TC-03) Check Edit the Nationality - Positive Scenario
 
     And User sending the keys in Dialog Content
       | searchName | group5testing |
@@ -61,7 +61,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Nationalities unde
       | successMessage | successfully |
 
 
-  Scenario: (SP-4-TC-04) Check Delete the Nationality - Positive Scenario
+  Scenario: (SP-12-TC-04) Check Delete the Nationality - Positive Scenario
 
     And User sending the keys in Dialog Content
       | searchName | group5test |
@@ -75,7 +75,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Nationalities unde
       | successMessage | successfully |
 
 
-  Scenario: (SP-4-TC-05) Check Delete the Nationality already deleted - Negative Scenario
+  Scenario: (SP-12-TC-05) Check Delete the Nationality already deleted - Negative Scenario
 
     And User sending the keys in Dialog Content
       | searchName | group5test |
