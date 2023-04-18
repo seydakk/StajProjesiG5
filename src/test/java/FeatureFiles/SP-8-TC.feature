@@ -1,4 +1,4 @@
-Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Parameters Setup
+Feature: As an Admin User I should be able to Add-Edit-Delete School Department under Parameters Setup
 
   Background:
     Given  I log in as an Admin
