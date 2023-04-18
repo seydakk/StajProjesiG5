@@ -136,6 +136,18 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
     private WebElement toggleBar;
 
+    @FindBy(xpath= "//td[contains(text(),'group5test')]//following::div/ms-edit-button")
+    private WebElement manualEditButton;
+
+    @FindBy(xpath= "//td[contains(text(),'group5test')]//following::div/ms-delete-button")
+    private WebElement manualDeleteButton;
+
+    @FindBy(xpath= "//td[contains(text(),'group5test')]")
+    private List<WebElement> deletedList;
+
+    @FindBy(xpath= "//*[contains(text(),'already Department')]")
+    private WebElement alreadyDepartmentExists;
+
 
 
 
@@ -210,7 +222,10 @@ public class DialogContent extends Parent{
              case "group5testingEditBtn": return group5testingEditBtn;
              case "capacity": return capacity;
              case "toggleBar": return toggleBar;
-            case "locationShortName": return locationShortName;
+             case "locationShortName": return locationShortName;
+             case "manualEditButton": return manualEditButton;
+             case "manualDeleteButton": return manualDeleteButton;
+            case "alreadyDepartmentExists": return alreadyDepartmentExists;
 
         }
 
@@ -225,6 +240,7 @@ public class DialogContent extends Parent{
             case "coderesultlist": return coderesultlist;
             case "editbuttonlist": return editbuttonlist;
             case "deletebuttonlist": return deletebuttonlist;
+            case "deletedList": return deletedList;
 
         }
         return null;

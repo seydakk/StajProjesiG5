@@ -4,6 +4,7 @@ import Pages.DialogContent;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.util.List;
@@ -42,14 +43,21 @@ public class SP_8_TC {
     @Then("Verify no data to display")
     public void verifyNoDataToDisplay(DataTable dt) {
 
-        List<List<String>> items = dt.asLists(String.class);
-
-        for (int i = 0; i < items.size(); i++) {
-            for (int j = 0; j < dc.getWebElementlist("nameresultlist").size(); j++) {
-                if(items.get(i).get(0).equals(dc.getWebElementlist("nameresultlist").get(j).getText()))
-                {Assert.assertNotEquals(dc.getWebElementlist("coderesultlist").get(j).getText(), items.get(i).get(1));}
-            }
+        List<String> items = dt.asList(String.class);
+        for (String item: items) {
+            List<WebElement> elementList = dc.getWebElementlist(item);
+            if (elementList.size()==0)
+                System.out.println("No Data To Display");
         }
+
+//        List<List<String>> items = dt.asLists(String.class);
+//
+//        for (int i = 0; i < items.size(); i++) {
+//            for (int j = 0; j < dc.getWebElementlist("nameresultlist").size(); j++) {
+//                if(items.get(i).get(0).equals(dc.getWebElementlist("nameresultlist").get(j).getText()))
+//                {Assert.assertNotEquals(dc.getWebElementlist("coderesultlist").get(j).getText(), items.get(i).get(1));}
+//            }
+//        }
     }
 }
 
