@@ -48,13 +48,36 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Discounts under Pa
 
       | requiredField | cannot be left blank |
 
-  Scenario: (SP-11-TC-02) Check Edit the document - Positive Scenario
+  Scenario: (SP-11-TC-03) Check Edit the discount - Positive Scenario
+
+    And User sending the keys in Dialog Content
+
+      | descriptionSearch | group5testing |
+
+    And Click on the element in Dialog
+
+      | editButton |
+
+    And User sending the keys in Dialog Content
+
+      | descriptionInput        | ggroup5testing |
+      | integrationCodeInputDis | 5511ofy        |
+      | priorityDis             | 4             |
+
+    And Send the TAB signal
+
+    And Click on the element in Dialog
+
+      | saveButton |
+
+    Then Verify contains text
+
+      | successMessage | successfully |
+
+
+  Scenario: (SP-11-TC-04) Check Delete the field - Positive Scenario
 
 
 
-  Scenario: (SP-11-TC-03) Check Delete the field - Positive Scenario
-
-
-
-  Scenario: (SP-11-TC-04) Check Delete the field already deleted - Negative Scenario
+  Scenario: (SP-11-TC-05) Check Delete the field already deleted - Negative Scenario
 

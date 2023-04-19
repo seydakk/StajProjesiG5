@@ -179,6 +179,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//mat-error[text()=' This field cannot be left blank!']")
     private WebElement requiredField;
 
+    @FindBy(xpath= "(//*[@data-placeholder='Description'])[1]")
+    private WebElement descriptionSearch;
+
 
 
 
@@ -257,6 +260,7 @@ public class DialogContent extends Parent{
              case "integrationCodeInputDis": return integrationCodeInputDis;
              case "priorityDis": return priorityDis;
              case "requiredField": return requiredField;
+             case "descriptionSearch": return descriptionSearch;
 
 
         }
