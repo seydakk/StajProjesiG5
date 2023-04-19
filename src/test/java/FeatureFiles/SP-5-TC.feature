@@ -61,7 +61,7 @@ Feature: Admin User should be able to Add-Edit-Delete Positions under Resources 
       | editButton |
 
     And User sending the keys in Dialog Content
-      | searchNameInHumanR | Kito Mamasever |
+      | nameInput | Kito Mamasever |
 
     And Click on the element in Dialog
       | saveButton |
