@@ -30,6 +30,7 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath= "//ms-add-button[contains(@tooltip,'ADD')]//button")
     private WebElement addButton;
+
     @FindBy(xpath= "//button[@type='submit']")
     private WebElement deleteDialogBtn;
 
@@ -148,12 +149,11 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//*[contains(text(),'already Department')]")
     private WebElement alreadyDepartmentExists;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
+    private  WebElement newGradeShortName;
 
-
-
-
-
-
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
+    private  WebElement newGradeOrder;
 
 
 
@@ -226,7 +226,10 @@ public class DialogContent extends Parent{
              case "locationShortName": return locationShortName;
              case "manualEditButton": return manualEditButton;
              case "manualDeleteButton": return manualDeleteButton;
-            case "alreadyDepartmentExists": return alreadyDepartmentExists;
+             case "alreadyDepartmentExists": return alreadyDepartmentExists;
+             case "newGradeShortName": return newGradeShortName;
+             case "newGradeOrder": return newGradeOrder;
+
 
         }
 

@@ -1,4 +1,4 @@
-Feature: Admin User should be able to Add Positions under Resources Setup
+Feature: Admin User should be able to Add-Edit-Delete Positions under Resources Setup
 
   Background:
     Given I log in as an Admin
@@ -9,7 +9,7 @@ Feature: Admin User should be able to Add Positions under Resources Setup
       | positionsInHumanR |
 
 
-  Scenario: (SP-5-TC-01) Admin should be already in the Setup  under Human Resources Functionality - Positive Scenario
+  Scenario: (SP-5-TC-01) Admin should be already in the Setup under Human Resources Functionality - Positive Scenario
 
     And Click on the element in Dialog
 
