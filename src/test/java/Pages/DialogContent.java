@@ -167,7 +167,11 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//*[contains(text(),'already exists')]")
     private WebElement locationAlreadyExist;
 
+    @FindBy(xpath= "(//div[contains(@class,'mat-sort-header-content')])[1]")
+    private WebElement hashtag;
 
+    @FindBy(xpath= "(//div[contains(@class,'mat-sort-header-arrow')])[1]")
+    private WebElement sortarrow;
 
 
 
@@ -245,7 +249,8 @@ public class DialogContent extends Parent{
              case "manualEditButtonForLocation": return manualEditButtonForLocation;
              case "manualDeleteButtonForLocation": return manualDeleteButtonForLocation;
              case "locationAlreadyExist": return locationAlreadyExist;
-
+             case "sortarrow": return sortarrow;
+             case "hashtag": return hashtag;
 
 
 
