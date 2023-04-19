@@ -10,7 +10,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Discounts under Pa
       | discounts     |
 
 
-  Scenario: (SP-11-TC-01) Check Add new document - Positive Scenario
+  Scenario: (SP-11-TC-01) Check Add new discount - Positive Scenario
 
     And Click on the element in Dialog
 
@@ -32,6 +32,21 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Discounts under Pa
 
       | successMessage | successfully |
 
+
+  Scenario: (SP-3-TC-02) Check Add new discount - Negative Scenario
+
+    And Click on the element in Dialog
+
+      | addButton |
+
+    And User sending the keys in Dialog Content
+
+      | integrationCodeInputDis | 511ofy        |
+      | priorityDis             | 3             |
+
+    Then Verify contains text
+
+      | requiredField | cannot be left blank |
 
   Scenario: (SP-11-TC-02) Check Edit the document - Positive Scenario
 
