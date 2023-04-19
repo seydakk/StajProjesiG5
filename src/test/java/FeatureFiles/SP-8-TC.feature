@@ -20,7 +20,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete School Department 
     And Click on the element in Dialog
       | saveButton |
 
-    Then Verify contains text
+    And Verify contains text
       | successMessage | successfully |
 
     Then Display required element
@@ -46,6 +46,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete School Department 
   Scenario: (SP-8-TC-03) Check Edit the School Department - Positive Scenario
 
     And Click on the element in Dialog
+      | hashtag |
+      | sortarrow |
       | manualEditButton |
 
     And User sending the keys in Dialog Content
@@ -62,6 +64,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete School Department 
   Scenario: (SP-8-TC-04) Check Delete the School Department - Positive Scenario
 
     And Click on the element in Dialog
+      | hashtag |
+      | sortarrow |
       | manualDeleteButton |
 
     And Click on the element in Dialog
@@ -73,6 +77,9 @@ Feature: As an Admin User I should be able to Add-Edit-Delete School Department 
 
   Scenario: (SP-8-TC-05) Check Delete the School Department already deleted - Negative Scenario
 
+    And Click on the element in Dialog
+      | hashtag |
+      | sortarrow |
+
     Then Verify no data to display
       | deletedList |
-
