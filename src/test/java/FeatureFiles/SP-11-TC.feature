@@ -53,6 +53,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Discounts under Pa
     And User sending the keys in Dialog Content
 
       | descriptionSearch | group5testing |
+      | integrationSearch | 511ofy        |
 
     And Click on the element in Dialog
 
@@ -77,7 +78,33 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Discounts under Pa
 
   Scenario: (SP-11-TC-04) Check Delete the field - Positive Scenario
 
+    And User sending the keys in Dialog Content
+
+      | descriptionSearch | ggroup5testing |
+      | integrationSearch | 5511ofy        |
+
+    And Click on the element in Dialog
+
+      | searchButton    |
+      | deleteButton    |
+      | deleteDialogBtn |
+
+    Then Verify contains text
+
+      | successMessage | successfully |
 
 
   Scenario: (SP-11-TC-05) Check Delete the field already deleted - Negative Scenario
 
+    And User sending the keys in Dialog Content
+
+      | descriptionSearch | ggroup5testing |
+      | integrationSearch | 5511ofy        |
+
+    And Click on the element in Dialog
+
+      | searchButton    |
+
+    Then Verify contains text
+
+      | verifyDelete | no data to display |
