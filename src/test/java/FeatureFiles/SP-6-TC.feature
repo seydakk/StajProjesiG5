@@ -1,6 +1,5 @@
 Feature: Education Functionality
 
-
   Background:
     Given  I log in as an Admin
     When Click on the element in LeftNav
@@ -49,9 +48,12 @@ Feature: Education Functionality
 
   Scenario:(SP-6-TC-03)  Edit-Activate/Deactivate  a Subject Category
 
-    And Click on the element in Dialog
+    And User sending the keys in Dialog Content
+      | searchName | naturalScience |
 
-      | editButton |
+    And Click on the element in Dialog
+      | searchButton |
+      | editButton   |
 
     And User sending the keys in Dialog Content
       | nameInput | HumanBiology |
@@ -70,9 +72,7 @@ Feature: Education Functionality
     And User delete item from Dialog Content
       |  HumanBiology |
 
-
     Then Verify contains text
-
       | successMessage | successfully |
 
   Scenario:(SP-6-TC-05)  Delete a Subject Category  Negative Scenario
@@ -82,7 +82,6 @@ Feature: Education Functionality
       | searchName |  HumanBiology |
 
     And Click on the element in Dialog
-
       | searchButton |
 
     Then Verify contains text
