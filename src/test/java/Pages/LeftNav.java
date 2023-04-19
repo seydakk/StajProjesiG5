@@ -84,27 +84,27 @@ public class LeftNav extends Parent{
 
         switch (strButton){
 
-             case "txtTechnoStudy": return txtTechnoStudy;
-             case "humanResources": return humanResources;
-             case "setupInHumanR": return setupInHumanR;
-             case "positionCategories": return positionCategories;
-             case "setup": return setup;
-             case "parameters": return parameters;
-             case "fields": return fields;
-             case "departments": return departments;
-             case "bankAccount": return bankAccount;
-             case "positionsInHumanR": return  positionsInHumanR;
-             case "documentTypes": return documentTypes;
-             case "attestations": return attestations;
-             case "schoolSetup": return schoolSetup;
-             case "locations": return locations;
-             case "education": return education;
-             case "setupEdu": return setupEdu;
-             case "subjectCategories": return subjectCategories;
-             case "nationalities": return nationalities;
-             case "setupForGradeLevels": return setupForGradeLevels;
-             case "gradeLevels": return  gradeLevels;
-             case "discounts": return  discounts;
+            case "txtTechnoStudy": return txtTechnoStudy;
+            case "humanResources": return humanResources;
+            case "setupInHumanR": return setupInHumanR;
+            case "positionCategories": return positionCategories;
+            case "setup": return setup;
+            case "parameters": return parameters;
+            case "fields": return fields;
+            case "departments": return departments;
+            case "bankAccount": return bankAccount;
+            case "positionsInHumanR": return  positionsInHumanR;
+            case "documentTypes": return documentTypes;
+            case "attestations": return attestations;
+            case "schoolSetup": return schoolSetup;
+            case "locations": return locations;
+            case "education": return education;
+            case "setupEdu": return setupEdu;
+            case "subjectCategories": return subjectCategories;
+            case "nationalities": return nationalities;
+            case "setupForGradeLevels": return setupForGradeLevels;
+            case "gradeLevels": return  gradeLevels;
+            case "discounts": return  discounts;
 
 
 

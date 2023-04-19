@@ -167,6 +167,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//*[contains(text(),'already exists')]")
     private WebElement locationAlreadyExist;
 
+    @FindBy(xpath= "(//div[contains(@class,'mat-sort-header-content')])[1]")
+    private WebElement hashtag;
+
+    @FindBy(xpath= "(//div[contains(@class,'mat-sort-header-arrow')])[1]")
+    private WebElement sortarrow;
+
     @FindBy(xpath= "(//*[@data-placeholder='Description'])[2]")
     private WebElement descriptionInput;
 
@@ -195,10 +201,6 @@ public class DialogContent extends Parent{
 
 
 
-
-
-
-
     public void deleteItem(String searchText){
 
         sendKeysFunction(searchName, searchText);
@@ -212,7 +214,7 @@ public class DialogContent extends Parent{
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
         clickFunction(deleteButton);
         clickFunction(deleteDialogBtn);
-      //  verifyContainsTextFunction(successMessage, "successfully");
+        //  verifyContainsTextFunction(successMessage, "successfully");
 
     }
 
@@ -220,55 +222,59 @@ public class DialogContent extends Parent{
 
         switch (strButton){
 
-             case "usernameLogin": return usernameLogin;
-             case "passwordLogin": return passwordLogin;
-             case "loginButton": return loginButton;
-             case "searchName": return searchName;
-             case "addButton": return addButton;
-             case "deleteButton": return deleteButton;
-             case "deleteDialogBtn": return deleteDialogBtn;
-             case "searchButton": return searchButton;
-             case "editButton": return editButton;
-             case "searchCode": return searchCode;
-             case "saveButton": return saveButton;
-             case "successMessage": return successMessage;
-             case "nameInput": return nameInput;
-             case "codeInput": return codeInput;
-             case "selectFieldType": return selectFieldType;
-             case "alreadyExists": return alreadyExists;
-             case "verifyDelete": return verifyDelete;
-             case "logical": return logical;
-             case "selectarrow": return selectarrow;
-             case "searchBox": return searchBox;
-             case "iban": return iban;
-             case "integrationCode": return integrationCode;
-             case "currency": return currency;
-             case "tryInCurrency": return tryInCurrency;
-             case "usdInCurrency": return usdInCurrency;
-             case "shortName": return shortName;
-             case "searchNameInHumanR":return searchNameInHumanR;
-             case "searchShortNameInHumanR": return searchShortNameInHumanR;
-             case "selectStageNewDoc": return selectStageNewDoc;
-             case "employment": return employment;
-             case "selectStageEditDoc": return selectStageEditDoc;
-             case "group5testingEditBtn": return group5testingEditBtn;
-             case "capacity": return capacity;
-             case "toggleBar": return toggleBar;
-             case "locationShortName": return locationShortName;
-             case "manualEditButton": return manualEditButton;
-             case "manualDeleteButton": return manualDeleteButton;
-             case "alreadyDepartmentExists": return alreadyDepartmentExists;
-             case "newGradeShortName": return newGradeShortName;
-             case "newGradeOrder": return newGradeOrder;
-             case "manualEditButtonForLocation": return manualEditButtonForLocation;
-             case "manualDeleteButtonForLocation": return manualDeleteButtonForLocation;
-             case "locationAlreadyExist": return locationAlreadyExist;
-             case "descriptionInput": return descriptionInput;
-             case "integrationCodeInputDis": return integrationCodeInputDis;
-             case "priorityDis": return priorityDis;
-             case "requiredField": return requiredField;
-             case "descriptionSearch": return descriptionSearch;
-             case "integrationSearch": return integrationSearch;
+            case "usernameLogin": return usernameLogin;
+            case "passwordLogin": return passwordLogin;
+            case "loginButton": return loginButton;
+            case "searchName": return searchName;
+            case "addButton": return addButton;
+            case "deleteButton": return deleteButton;
+            case "deleteDialogBtn": return deleteDialogBtn;
+            case "searchButton": return searchButton;
+            case "editButton": return editButton;
+            case "searchCode": return searchCode;
+            case "saveButton": return saveButton;
+            case "successMessage": return successMessage;
+            case "nameInput": return nameInput;
+            case "codeInput": return codeInput;
+            case "selectFieldType": return selectFieldType;
+            case "alreadyExists": return alreadyExists;
+            case "verifyDelete": return verifyDelete;
+            case "logical": return logical;
+            case "selectarrow": return selectarrow;
+            case "searchBox": return searchBox;
+            case "iban": return iban;
+            case "integrationCode": return integrationCode;
+            case "currency": return currency;
+            case "tryInCurrency": return tryInCurrency;
+            case "usdInCurrency": return usdInCurrency;
+            case "shortName": return shortName;
+            case "searchNameInHumanR":return searchNameInHumanR;
+            case "searchShortNameInHumanR": return searchShortNameInHumanR;
+            case "selectStageNewDoc": return selectStageNewDoc;
+            case "employment": return employment;
+            case "selectStageEditDoc": return selectStageEditDoc;
+            case "group5testingEditBtn": return group5testingEditBtn;
+            case "capacity": return capacity;
+            case "toggleBar": return toggleBar;
+            case "locationShortName": return locationShortName;
+            case "manualEditButton": return manualEditButton;
+            case "manualDeleteButton": return manualDeleteButton;
+            case "alreadyDepartmentExists": return alreadyDepartmentExists;
+            case "newGradeShortName": return newGradeShortName;
+            case "newGradeOrder": return newGradeOrder;
+            case "manualEditButtonForLocation": return manualEditButtonForLocation;
+            case "manualDeleteButtonForLocation": return manualDeleteButtonForLocation;
+            case "locationAlreadyExist": return locationAlreadyExist;
+            case "sortarrow": return sortarrow;
+            case "hashtag": return hashtag;
+            case "descriptionInput": return descriptionInput;
+            case "integrationCodeInputDis": return integrationCodeInputDis;
+            case "priorityDis": return priorityDis;
+            case "requiredField": return requiredField;
+            case "descriptionSearch": return descriptionSearch;
+            case "integrationSearch": return integrationSearch;
+
+
 
         }
 
