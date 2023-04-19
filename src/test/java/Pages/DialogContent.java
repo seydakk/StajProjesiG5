@@ -155,6 +155,18 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
     private  WebElement newGradeOrder;
 
+    @FindBy(xpath= "//td[contains(text(),'name10')]//following::div/ms-edit-button")
+    private WebElement manualEditButtonForLocation;
+
+    @FindBy(xpath= "//td[contains(text(),'name11')]//following::div/ms-delete-button")
+    private WebElement manualDeleteButtonForLocation;
+
+    @FindBy(xpath= "//td[contains(text(),'name10')]")
+    private List<WebElement> deletedListForLocation;
+
+    @FindBy(xpath= "//*[contains(text(),'already exists')]")
+    private WebElement locationAlreadyExist;
+
 
 
 
@@ -229,6 +241,9 @@ public class DialogContent extends Parent{
              case "alreadyDepartmentExists": return alreadyDepartmentExists;
              case "newGradeShortName": return newGradeShortName;
              case "newGradeOrder": return newGradeOrder;
+            case "manualEditButtonForLocation": return manualEditButtonForLocation;
+            case "manualDeleteButtonForLocation": return manualDeleteButtonForLocation;
+            case "locationAlreadyExist": return locationAlreadyExist;
 
 
         }
