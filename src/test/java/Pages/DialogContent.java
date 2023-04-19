@@ -167,8 +167,14 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//*[contains(text(),'already exists')]")
     private WebElement locationAlreadyExist;
 
+    @FindBy(xpath= "(//*[@data-placeholder='Description'])[2]")
+    private WebElement descriptionInput;
 
+    @FindBy(xpath= "(//*[@data-placeholder='Integration Code'])[2]")
+    private WebElement integrationCodeInputDis;
 
+    @FindBy(xpath= "//*[@data-placeholder='Priority']")
+    private WebElement priorityDis;
 
 
 
@@ -245,9 +251,9 @@ public class DialogContent extends Parent{
              case "manualEditButtonForLocation": return manualEditButtonForLocation;
              case "manualDeleteButtonForLocation": return manualDeleteButtonForLocation;
              case "locationAlreadyExist": return locationAlreadyExist;
-
-
-
+             case "descriptionInput": return descriptionInput;
+             case "integrationCodeInputDis": return integrationCodeInputDis;
+             case "priorityDis": return priorityDis;
 
         }
 

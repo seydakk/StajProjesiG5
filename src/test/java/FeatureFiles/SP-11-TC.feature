@@ -18,14 +18,11 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Discounts under Pa
 
     And User sending the keys in Dialog Content
 
-      | nameInput | group5testing |
+      | descriptionInput        | group5testing |
+      | integrationCodeInputDis | 511ofy        |
+      | priorityDis             | 3             |
 
-    And Click on the element in Dialog
-
-      | selectStageNewDoc |
-      | employment        |
-
-    And Send the ESCAPE signal
+    And Send the TAB signal
 
     And Click on the element in Dialog
 
@@ -34,9 +31,6 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Discounts under Pa
     Then Verify contains text
 
       | successMessage | successfully |
-
-    Then Display required element
-      | searchBox |
 
 
   Scenario: (SP-11-TC-02) Check Edit the document - Positive Scenario
