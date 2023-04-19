@@ -180,6 +180,7 @@ public class DialogContent extends Parent{
 
 
 
+
     public void deleteItem(String searchText){
 
         sendKeysFunction(searchName, searchText);
@@ -241,9 +242,11 @@ public class DialogContent extends Parent{
              case "alreadyDepartmentExists": return alreadyDepartmentExists;
              case "newGradeShortName": return newGradeShortName;
              case "newGradeOrder": return newGradeOrder;
-            case "manualEditButtonForLocation": return manualEditButtonForLocation;
-            case "manualDeleteButtonForLocation": return manualDeleteButtonForLocation;
-            case "locationAlreadyExist": return locationAlreadyExist;
+             case "manualEditButtonForLocation": return manualEditButtonForLocation;
+             case "manualDeleteButtonForLocation": return manualDeleteButtonForLocation;
+             case "locationAlreadyExist": return locationAlreadyExist;
+
+
 
 
         }
