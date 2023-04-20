@@ -24,6 +24,9 @@ Feature: Admin User should be able to Add-Edit-Delete Grade Levels under Paramet
     Then Verify contains text
       | successMessage | successfully |
 
+    Then Display required element
+      | searchName |
+
 
     Scenario: (SP-10-TC-02) Admin User should be able to Add Grade Levels under Parameters Setup - Negative Scenario
 

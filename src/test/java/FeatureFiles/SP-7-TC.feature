@@ -28,6 +28,9 @@ Feature: As an Admin User I should be able to Add-Edit-Delete School Locations u
     Then Verify contains text
       | successMessage | successfully |
 
+    Then Display required element
+      | searchName |
+
 
   Scenario: (SP-7-TC-02) Check Add new School Location with same data - Negative Scenario
 
