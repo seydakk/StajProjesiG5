@@ -8,7 +8,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -89,4 +92,14 @@ public class _00_DataTableSteps {
         }
     }
 
+    @And("Click on the element in LeftNav with jscript")
+    public void clickOnTheElementInLeftNavWithJscript(DataTable dt) {
+        List<String> items = dt.asList(String.class);
+        for (String item : items) {
+            WebElement element = ln.getWebElement(item);
+            JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+            js.executeScript("arguments[0].click();", element);
+
+        }
+    }
 }

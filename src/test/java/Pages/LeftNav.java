@@ -80,6 +80,7 @@ public class LeftNav extends Parent{
 
 
 
+
     public WebElement getWebElement(String strButton){
 
         switch (strButton){
@@ -105,7 +106,6 @@ public class LeftNav extends Parent{
              case "setupForGradeLevels": return setupForGradeLevels;
              case "gradeLevels": return  gradeLevels;
              case "discounts": return  discounts;
-
 
 
         }
