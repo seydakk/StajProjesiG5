@@ -16,7 +16,7 @@ Feature: Admin User should be able to Add-Edit-Delete Positions under Resources 
       | addButton |
 
     And User sending the keys in Dialog Content
-      | nameInput | Kito Catalkayaaa|
+      | nameInput | Kito Catalkayaaa |
 
     And User sending the keys in Dialog Content
       | shortName | Kito |
@@ -54,7 +54,7 @@ Feature: Admin User should be able to Add-Edit-Delete Positions under Resources 
 
     And User sending the keys in Dialog Content
       | searchNameInHumanR      | Kito Catalkayaaa |
-      | searchShortNameInHumanR | Kito            |
+      | searchShortNameInHumanR | Kito             |
 
     And Click on the element in Dialog
       | searchButton |
@@ -73,7 +73,7 @@ Feature: Admin User should be able to Add-Edit-Delete Positions under Resources 
 
     And User sending the keys in Dialog Content
       | searchNameInHumanR      | Kito Catalkaya |
-      | searchShortNameInHumanR | Kito          |
+      | searchShortNameInHumanR | Kito           |
 
     And Click on the element in Dialog
       | searchButton |
@@ -88,12 +88,11 @@ Feature: Admin User should be able to Add-Edit-Delete Positions under Resources 
       | successMessage | successfully |
 
 
-
   Scenario: (SP-5-TC-05) Admin User should not be able to access deleted Positions under Resources Setup
 
     And User sending the keys in Dialog Content
       | searchNameInHumanR      | Kito Catalkaya |
-      | searchShortNameInHumanR | Kito          |
+      | searchShortNameInHumanR | Kito           |
 
     And Click on the element in Dialog
       | searchButton |

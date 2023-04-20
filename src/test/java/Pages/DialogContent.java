@@ -191,15 +191,14 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "(//*[@data-placeholder='Integration Code'])[1]")
     private WebElement integrationSearch;
 
-  //  @FindBy(xpath = "//*[@class='mat-sort-header-pointer-right ng-tns-c82-79 ng-trigger ng-trigger-rightPointer']")
-  //  private WebElement gradeLevelsHashtag;
-
     @FindBy(xpath = "(//*[@class='svg-inline--fa fa-pen-to-square'])[1]")
     private  WebElement gradeLevelsEdit;
 
-    @FindBy(xpath = "(//*[@class='svg-inline--fa fa-trash-can'])[4]")
+    @FindBy(xpath = "(//*[@class='svg-inline--fa fa-trash-can'])[1]")
     private  WebElement gradeLevelsDelete;
 
+    @FindBy(xpath= "//td[contains(text(),'Catalkaya')]")
+    private List<WebElement> deletedAndy;
 
 
 
@@ -285,9 +284,9 @@ public class DialogContent extends Parent{
              case "requiredField": return requiredField;
              case "descriptionSearch": return descriptionSearch;
              case "integrationSearch": return integrationSearch;
-         //   case "gradeLevelsHashtag":return gradeLevelsHashtag;
              case"gradeLevelsEdit": return gradeLevelsEdit;
-            case"gradeLevelsDelete":return  gradeLevelsDelete;
+             case"gradeLevelsDelete":return  gradeLevelsDelete;
+
 
 
         }
@@ -304,6 +303,7 @@ public class DialogContent extends Parent{
             case "editbuttonlist": return editbuttonlist;
             case "deletebuttonlist": return deletebuttonlist;
             case "deletedList": return deletedList;
+            case "deletedAndy" :return deletedAndy;
 
         }
         return null;
