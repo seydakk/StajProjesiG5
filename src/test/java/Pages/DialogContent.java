@@ -191,6 +191,15 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "(//*[@data-placeholder='Integration Code'])[1]")
     private WebElement integrationSearch;
 
+  //  @FindBy(xpath = "//*[@class='mat-sort-header-pointer-right ng-tns-c82-79 ng-trigger ng-trigger-rightPointer']")
+  //  private WebElement gradeLevelsHashtag;
+
+    @FindBy(xpath = "(//*[@class='svg-inline--fa fa-pen-to-square'])[1]")
+    private  WebElement gradeLevelsEdit;
+
+    @FindBy(xpath = "(//*[@class='svg-inline--fa fa-trash-can'])[4]")
+    private  WebElement gradeLevelsDelete;
+
 
 
 
@@ -276,7 +285,9 @@ public class DialogContent extends Parent{
              case "requiredField": return requiredField;
              case "descriptionSearch": return descriptionSearch;
              case "integrationSearch": return integrationSearch;
-
+         //   case "gradeLevelsHashtag":return gradeLevelsHashtag;
+             case"gradeLevelsEdit": return gradeLevelsEdit;
+            case"gradeLevelsDelete":return  gradeLevelsDelete;
 
 
         }
