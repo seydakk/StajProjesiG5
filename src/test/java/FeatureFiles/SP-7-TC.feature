@@ -70,7 +70,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete School Locations u
       | successMessage | successfully |
 
 
-  Scenario: (SP-7-TC-04)
+  Scenario: (SP-7-TC-04) Check Delete the School Location - Positive Scenario
 
     And Click on the element in Dialog
       | manualDeleteButtonForLocation |
