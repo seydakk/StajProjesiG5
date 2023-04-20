@@ -7,7 +7,9 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -34,7 +36,8 @@ public class _00_DataTableSteps {
         List<String> dialogBtns = items.asList(String.class);
         for (String dialogBtn : dialogBtns) {
             WebElement element = dc.getWebElement(dialogBtn);
-            dc.waitUntilVisible(element);
+            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+            //dc.waitUntilVisible(element);
             dc.clickFunction(element);
         }
     }

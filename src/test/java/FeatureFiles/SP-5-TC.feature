@@ -28,7 +28,6 @@ Feature: Admin User should be able to Add-Edit-Delete Positions under Resources 
       | successMessage | successfully |
 
 
-
   Scenario: (SP-5-TC-02) Admin should have already created a new positions - Negative Scenario
 
     And Click on the element in Dialog
@@ -56,7 +55,7 @@ Feature: Admin User should be able to Add-Edit-Delete Positions under Resources 
 
     And Click on the element in Dialog
       | searchButton |
-      | editButton |
+      | editButton   |
 
     And User sending the keys in Dialog Content
       | nameInput | Kito Mamasever |
