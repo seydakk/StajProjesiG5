@@ -24,7 +24,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete School Department 
       | successMessage | successfully |
 
     Then Display required element
-      | searchBox |
+      | searchName |
 
 
   Scenario: (SP-8-TC-02) Check Add new School Department with same data - Negative Scenario
