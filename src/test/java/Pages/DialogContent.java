@@ -173,7 +173,23 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "(//div[contains(@class,'mat-sort-header-arrow')])[1]")
     private WebElement sortarrow;
 
+    @FindBy(xpath= "(//*[@data-placeholder='Description'])[2]")
+    private WebElement descriptionInput;
 
+    @FindBy(xpath= "(//*[@data-placeholder='Integration Code'])[2]")
+    private WebElement integrationCodeInputDis;
+
+    @FindBy(xpath= "//*[@data-placeholder='Priority']")
+    private WebElement priorityDis;
+
+    @FindBy(xpath= "//mat-error[text()=' This field cannot be left blank!']")
+    private WebElement requiredField;
+
+    @FindBy(xpath= "(//*[@data-placeholder='Description'])[1]")
+    private WebElement descriptionSearch;
+
+    @FindBy(xpath= "(//*[@data-placeholder='Integration Code'])[1]")
+    private WebElement integrationSearch;
 
 
 
@@ -251,7 +267,12 @@ public class DialogContent extends Parent{
              case "locationAlreadyExist": return locationAlreadyExist;
              case "sortarrow": return sortarrow;
              case "hashtag": return hashtag;
-
+             case "descriptionInput": return descriptionInput;
+             case "integrationCodeInputDis": return integrationCodeInputDis;
+             case "priorityDis": return priorityDis;
+             case "requiredField": return requiredField;
+             case "descriptionSearch": return descriptionSearch;
+             case "integrationSearch": return integrationSearch;
 
 
         }

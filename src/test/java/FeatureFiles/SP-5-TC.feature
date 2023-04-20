@@ -56,8 +56,6 @@ Feature: Admin User should be able to Add-Edit-Delete Positions under Resources 
 
     And Click on the element in Dialog
       | searchButton |
-
-    And Click on the element in Dialog
       | editButton |
 
     And User sending the keys in Dialog Content
