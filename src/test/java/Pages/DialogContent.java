@@ -202,6 +202,8 @@ public class DialogContent extends Parent{
 
 
 
+
+
     public void deleteItem(String searchText){
 
         sendKeysFunction(searchName, searchText);
@@ -274,6 +276,7 @@ public class DialogContent extends Parent{
              case "requiredField": return requiredField;
              case "descriptionSearch": return descriptionSearch;
              case "integrationSearch": return integrationSearch;
+
 
 
         }

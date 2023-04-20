@@ -7,6 +7,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
 
       | setup      |
       | parameters |
+
+    And Click on the element in LeftNav with jscript
       | fields     |
 
   Scenario: (SP-4-TC-01) Check Add new field - Positive Scenario
@@ -51,7 +53,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
     And Click on the element in Dialog
 
       | selectarrow |
-      | logical |
+      | logical     |
 
     And Click on the element in Dialog
 
